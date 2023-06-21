@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <ul id="user-list"></ul>
+
+    <script>
+        var loggedUser = localStorage.getItem('loggedUser');
+
+        if (loggedUser) {
+            var user = JSON.parse(loggedUser);
+
+            if (user.username && user.password) {
+                var userListElement = document.getElementById('user-list');
+                var usuarios = JSON.parse(localStorage.getItem('loginData')).usuarios;
+
+                usuarios.forEach(function(usuario) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = 'Nome: ' + usuario.username + ', Permissão: ' + usuario.permissao;
+                    userListElement.appendChild(listItem);
+                });
+            } else {
+                window.location.href = 'login.html';
+            }
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
