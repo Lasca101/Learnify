@@ -68,5 +68,24 @@
             "label": "Data de Nascimento",
             "required": true
           }
-        ]
-      },
+        {
+            "id": "login-form-wrapper",
+            "permission": "all",
+            "formId": "login-form",
+            "onSubmit": "login(); return false;",
+            "fields": [
+                {
+                    "id": "login-username",
+                    "type": "text",
+                    "placeholder": "Usuário",
+                    "required": true
+                },
+                {
+                    "id": "login-password",
+                    "type": "password",
+                    "placeholder": "Senha",
+                    "required": true
+                }
+            ]
+        }
+    ]
