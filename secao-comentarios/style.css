@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+main {
+    background-color: lightgray;
+    padding-bottom: 100px;
+    padding-top: 10%;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+
+
+
+
+
+/* classes */
+
+/* cabecalho */
+#cabecalho {
+    display: grid;
+    grid-template-columns: (1fr,2fr,2fr);
+}
+
+.barra-home {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: 25%;
+    margin-top: 30px;
+    display: flex;
+}
+
+.itens-barra-home {
+    text-decoration: none;
+    color: #009f32;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 70px;
+}
+
+.div-logo {
+    margin-top: 20px;
+    grid-row: 1/3;
+    grid-column: 1;
+    margin-left: 50%;
+}
+/* fim cabecalho */
+
+
+/* main */
+#secao-perguntas {
+    margin-left: 25%;
+}
+
+#secao-perguntas h2 {
+    margin-left: 15%;
+}
+
+#area-perguntar {
+    display: flex;
+}
+
+#input-pergunta {
+    width: 700px;
+}
+
+.pergunta-com-botao {
+    display: flex;
+    margin-top: 30px;
+}
+
+.botao-responder {
+    margin-left: 10px;
+}
+
+.card {
+    width: fit-content;
+}
+
+.botao-exibir-respostas {
+    margin-top: 5px;
+}
+
+.perguntas {
+    width: fit-content;
+}
+
+/**/
+#secao-responder {
+    position: fixed;
+    padding-left: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+      
+}
+
+#div-responder {
+    position: absolute;
+    top: 35%;
+    left: 33%;
+}
+
+#div-responder h2 {
+    text-align: center;
+}
+
+#input-resposta {
+    width: 500px;
+}
+
+#resposta-com-botao {
+    display: flex;
+}
+
+#botao-voltar-resposta {
+    margin-top: 10px;
+}
+
+#botao-enviar-resposta {
+    margin-left: 5px;
+}
+/**/
+/* fim main */
+
+
+
+/* footer */
+.redes-sociais-rodape {
+    grid-column: 1;
+    margin-left: 45%;
+}
+
+.itens-rodape {
+    margin-top: 5%;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.links-rodape {
+    grid-column: 2;
+    margin-left: 5%;
+}
+
+.copyright-rodape {
+    grid-column: 1/3;
+    width: fit-content;
+    margin-left: 45%;
+    font-size: 10px;
+    margin-top: 5%;
+}
+
+.fa-brands {
+    margin-left: 5%;
+    margin-top: 20%;
+}
+
+.conteudo-itens-rodape {
+    margin-top: 4%;
+}
+
+.texto-itens-rodape {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.links-politicas p {
+    margin-left: 5%;
+}
+
+.links-politicas :first-child {
+    margin-left: 0;
+    width: 130px;
+}
+
+.links-politicas {
+    display: flex;
+    margin-top: 5%;
+}
+
+.titulo-links {
+    text-align: center;
+}
+    /* fim footer */
+
