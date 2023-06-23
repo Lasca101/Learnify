@@ -1,124 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_homepage.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-blahblahblah" crossorigin="anonymous" />
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-    <title>Homepage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_homepage.css">
+  <link rel="stylesheet" href="style_midia_queries_homepage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-blahblahblah" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <title>Homepage</title>
+
+  <!-- código para incluir o FontAwesome no site -->
+  <script src="https://kit.fontawesome.com/f2c736aaab.js" crossorigin="anonymous"></script>
+  <!-- fim código para incluir o FontAwesome no site -->
 </head>
+
 <body>
+  <header>
     <header>
-        </style>
-    <div class="header">
-        <img src="/images/logo.png" alt="Logo do site">
-        <button>
-            <a href="login.html">
-            <p>Subscribe</p>
-            <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-        </a>
-        </button>
+      <div id="cabecalho">
+        <nav class="barra-home">
+          <ul class="menu">
+            <li><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
+          </ul>
+        </nav>
+
+        <nav class="div-logo">
+          <a href="/homepage/homepage.html"><img class="logo" src="/images/logo.png" alt="logo"></a>
+        </nav>
+      </div>
     </header>
 
-        </div>
+    <main>
+      <div class="search">
+        <input type="text" class="search__input" placeholder="Type your text">
+        <button class="search__button" onclick="searchCourses()">
+          <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+        </button>
+      </div>
 
-        <div class="search">
-            <input type="text" class="search__input" placeholder="Type your text">
-            <button class="search__button" onclick="searchCourses()">
-                <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-                    <g>
-                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                    </g>
-                </svg>
-            </button>
-        </div>
-
-        <body>
-            <div class="container">
-                <div class="row" id="cursoContainer">
-                  <div class="col-md-6 curso" data-title="Dropshipping" data-category="Comércio">
-                    <img src="images/curso1.jpg" alt="Curso 1">
-                    <h3>Dropshipping</h3>
-                    <p>Categoria: Comércio</p>
-                    <p>Avaliação: 4.5</p>
-                  </div>
-                  <div class="col-md-6 curso" data-title="Introdução à Python" data-category="Educacional">
-                    <img src="images/curso2.png" alt="Curso 2">
-                    <h3>Introdução à Python</h3>
-                    <p>Categoria: Educacional</p>
-                    <p>Avaliação: 3.8</p>
-                  </div>
-                  <div class="col-md-6 curso" data-title="Culinária Italiana" data-category="Culinária">
-                    <img src="images/curso3.jpg" alt="Curso 3">
-                    <h3>Culinária Italiana</h3>
-                    <p>Categoria: Culinária</p>
-                    <p>Avaliação: 4.2</p>
-                  </div>
-                  <div class="col-md-6 curso" data-title="Fique Rico em 1 Mês!" data-category="Comércio">
-                    <img src="images/curso4.jpg" alt="Curso 4">
-                    <h3>Fique Rico em 1 Mês!</h3>
-                    <p>Categoria: Comércio</p>
-                    <p>Avaliação: 4.9</p>
-                  </div>
-                </div>
-              </div>  
-
-
-<footer>
-    <style>
-        footer {
-      background-color: rgb(47, 125, 228);
-      color: #fff;
-      padding: 20px; 
-      margin-top: 40px;
-    }
-
-    .social-icons {
-      font-size: 24px;
-    }
-    
-    .social-icons a {
-      color: #fff;
-      margin-right: 10px;
-    }
-
-    </style>
-        <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h4>Informações de Contato</h4>
-          <p>Telefone: (123) 456-7890</p>
-          <p>Email: info@example.com</p>
-          <p>CNPJ: 123456789</p>
-        </div>
-        <div class="col-md-6">
-          <h4>Redes Sociais</h4>
-          <ul class="list-inline social-icons">
-            <li class="list-inline-item">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="row" id="cursoContainer">
+          <div class="col-md-6 curso" data-title="Dropshipping" data-category="Comércio">
+            <img src="images/curso1.jpg" alt="Curso 1">
+            <h3>Dropshipping</h3>
+            <p>Categoria: Comércio</p>
+            <p>Avaliação: 4.5</p>
+          </div>
+          <div class="col-md-6 curso" data-title="Introdução à Python" data-category="Educacional">
+            <img src="images/curso2.png" alt="Curso 2">
+            <h3>Introdução à Python</h3>
+            <p>Categoria: Educacional</p>
+            <p>Avaliação: 3.8</p>
+          </div>
+          <div class="col-md-6 curso" data-title="Culinária Italiana" data-category="Culinária">
+            <img src="images/curso3.jpg" alt="Curso 3">
+            <h3>Culinária Italiana</h3>
+            <p>Categoria: Culinária</p>
+            <p>Avaliação: 4.2</p>
+          </div>
+          <div class="col-md-6 curso" data-title="Fique Rico em 1 Mês!" data-category="Comércio">
+            <img src="images/curso4.jpg" alt="Curso 4">
+            <h3>Fique Rico em 1 Mês!</h3>
+            <p>Categoria: Comércio</p>
+            <p>Avaliação: 4.9</p>
+          </div>
         </div>
       </div>
-    </div>
-      </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    </main>
+
+    <footer>
+      <nav class="redes-sociais-rodape itens-rodape">
+          <h4>Redes Sociais</h4>
+          <nav>
+              <a class="texto-itens-rodape" href="#">
+                  <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                  <i class="fa-brands fa-square-twitter fa-2xl"></i>
+                  <i class="fa-brands fa-square-instagram fa-2xl"></i>
+              </a>
+          </nav>
+      </nav>
+
+      <nav class="links-rodape itens-rodape">
+          <h4 class="titulo-links">Institucional</h4>
+          <nav class="conteudo-itens-rodape">
+              <div class="texto-itens-rodape links-politicas">
+                  <a class="ancoras" href="/central-ajuda/central_ajuda.html"><p>Central de <br> Ajuda</p></a>
+                  <a class="ancoras" href="#"><p>Termos</p></a>
+                  <a class="ancoras" href="#"></a><p>Política de <br> Privacidade</p></a>
+              </div>
+          </nav>
+      </nav>
+
+      <div class="copyright-rodape">
+          <p>© 2007-2023 learnify.com</p>
+      </div>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
 </body>
-   
+
 
 </html>

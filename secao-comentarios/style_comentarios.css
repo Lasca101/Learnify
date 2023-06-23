@@ -191,13 +191,18 @@ footer {
     display: flex;
 }
 
-.links-politicas p {
-    margin-left: 5%;
+.ancoras {
+    text-decoration: none;
+    color: white;
+    
 }
 
-.links-politicas :first-child {
-    margin-left: 0;
-    width: 130px;
+.links-politicas a {
+    margin-left: 10%;
+}
+
+.links-politicas a :first-child {
+    width: max-content;
 }
 
 .links-politicas {
@@ -207,6 +212,8 @@ footer {
 
 .titulo-links {
     text-align: center;
+    width: 300px;
+    
 }
     /* fim footer */
 

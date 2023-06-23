@@ -15,7 +15,6 @@
     main {
         background-color: lightgray;
         padding-bottom: 100px;
-        padding-top: 10%;
     }
     
     footer {
@@ -78,55 +77,6 @@
     /* fim cabecalho */
     
     
-
-    /* main */
-    #secao-perguntas {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #secao-perguntas h2 {
-        text-align: center;
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-
-    .botao-responder {
-        height: fit-content;
-    }
-
-    .perguntas {
-        width: fit-content;
-    }
-
-    /**/
-    #div-responder {
-        position: absolute;
-        top: 35%;
-        left: 5%;
-        right: 5%;
-    }
-
-    #resposta-com-botao {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #input-resposta {
-        
-    }
-    
-    #secao-responder {
-        text-align: start;
-    }
-
-    #botao-voltar-resposta {
-        margin-left: 5%;
-    }
-    /**/
-    /* fim main */
-
-
     
     /* footer */
     .redes-sociais-rodape {
