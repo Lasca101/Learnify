@@ -275,7 +275,16 @@ button svg {
 
 .curso img {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
   display: block;
+}
+
+.ancora-cursos {
+  text-decoration: none;
+  color: black;
+}
+
+.categoria-curso {
+  color: black;
 }

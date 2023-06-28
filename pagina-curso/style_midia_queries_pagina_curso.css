@@ -1,0 +1,132 @@
+@media screen and (min-width:240px) and (max-width:1000px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+    }
+    
+    header {
+        background-color: black;
+        color: white;
+    }
+    
+    main {
+        background-color: lightgray;
+        padding-bottom: 100px;
+    }
+    
+    footer {
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* classes */
+    
+    /* cabecalho */
+    #cabecalho {
+        display: grid;
+        grid-template-columns: (1fr,2fr,2fr);
+    }
+    
+    .barra-home {
+        grid-column: 3;
+        grid-row: 1;
+        margin-left: 0;
+        margin-top: 30px;
+        display: flex;
+    }
+    
+    .itens-barra-home {
+        text-decoration: none;
+        color: #009f32;
+        font-weight: bold;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .menu li {
+        list-style: none;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 70px;
+    }
+    
+    .div-logo {
+        margin-top: 20px;
+        grid-row: 1/3;
+        grid-column: 1;
+        margin-left: 20%;
+    }
+    /* fim cabecalho */
+    
+    
+    
+    /* footer */
+    .redes-sociais-rodape {
+        grid-column: 1;
+    }
+    
+    .itens-rodape {
+        margin-top: 5%;
+        width: fit-content;
+        font-size: 14px;
+        margin-left: 15%;
+    }
+    
+    .links-rodape {
+        grid-column: 2;
+    }
+    
+    .copyright-rodape {
+        grid-column: 1/3;
+        width: fit-content;
+        margin-left: 35%;
+        font-size: 10px;
+        margin-top: 5%;
+    }
+    
+    .fa-brands {
+        margin-left: 5%;
+        margin-top: 20%;
+    }
+    
+    .conteudo-itens-rodape {
+        margin-top: 5%;
+        width: fit-content;
+    }
+    
+    .links-politicas {
+        display: block;
+        margin-top: 20%;
+        width: fit-content;
+        margin-left: 35%;
+    }
+
+    .links-politicas a {
+        margin-left: 0;
+    }
+
+    .titulo-links {
+        text-align: center;
+        width: fit-content;
+    }
+    /* fim footer */
+
+}

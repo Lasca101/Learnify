@@ -1,0 +1,199 @@
+{
+    "curso": [
+        {
+            "idCurso": 0,
+            "nome": "Programação em C - Prof. Pietro Martins",
+            "descricao": "Um curso com tdo que você precisa aprender para ser um programador em C",
+            "categoria": "programação",
+            "banner": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+            "imagem": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+            "video": [
+                {
+                    "idVideo": 0,
+                    "link": "https://www.youtube.com/embed/2w8GYzBjNj8",
+                    "thumbnail": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                    "titulo": "Primeira Aula Linguagem C",
+                    "data": [
+                        {
+                            "idPergunta": 0,
+                            "pergunta": "Como você faz a função retornar inteiro?",
+                            "resposta": [
+                                {
+                                    "perg": "Você deve utilizar int para isso."
+                                },
+                                {
+                                    "perg": "Ao declarar a variavel, use int."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 1,
+                            "pergunta": "Qual a plataforma usada no video?",
+                            "resposta": [
+                                {
+                                    "perg": "Utilizamos o Visual Studio Code."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 2,
+                            "pergunta": "Como faço para tornar a função modular?",
+                            "resposta": [
+                                {
+                                    "perg": "Coloque ela fora da função main."
+                                },
+                                {
+                                    "perg": "Deixe ela em escopo global."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "idVideo": 1,
+                    "link": "https://www.youtube.com/embed/2w8GYzBjNj8",
+                    "thumbnail": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                    "titulo": "Primeira Aula Linguagem C",
+                    "data": [
+                        {
+                            "idPergunta": 0,
+                            "pergunta": "Como você faz a função retornar inteiro?",
+                            "resposta": [
+                                {
+                                    "perg": "Você deve utilizar int para isso."
+                                },
+                                {
+                                    "perg": "Ao declarar a variavel, use int."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 1,
+                            "pergunta": "Qual a plataforma usada no video?",
+                            "resposta": [
+                                {
+                                    "perg": "Utilizamos o Visual Studio Code."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 2,
+                            "pergunta": "Como faço para tornar a função modular?",
+                            "resposta": [
+                                {
+                                    "perg": "Coloque ela fora da função main."
+                                },
+                                {
+                                    "perg": "Deixe ela em escopo global."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "idVideo": 2,
+                    "link": "https://www.youtube.com/embed/2w8GYzBjNj8",
+                    "thumbnail": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                    "titulo": "Primeira Aula Linguagem C",
+                    "data": [
+                        {
+                            "idPergunta": 0,
+                            "pergunta": "Como você faz a função retornar inteiro?",
+                            "resposta": [
+                                {
+                                    "perg": "Você deve utilizar int para isso."
+                                },
+                                {
+                                    "perg": "Ao declarar a variavel, use int."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 1,
+                            "pergunta": "Qual a plataforma usada no video?",
+                            "resposta": [
+                                {
+                                    "perg": "Utilizamos o Visual Studio Code."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 2,
+                            "pergunta": "Como faço para tornar a função modular?",
+                            "resposta": [
+                                {
+                                    "perg": "Coloque ela fora da função main."
+                                },
+                                {
+                                    "perg": "Deixe ela em escopo global."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "idCurso": 1,
+            "nome": "Equaciona Com Paulo Pereira - Aulas de Cálculo",
+            "descricao": "Aulas de cálculo 1 com a melhor didática possivel!",
+            "categoria": "matematica",
+            "banner": "https://i.ytimg.com/vi/k-88LTxTAoI/maxresdefault.jpg",
+            "imagem": "https://hotmart.s3.amazonaws.com/product_contents/511c4d24-c48d-4eb0-b069-3a0a45609ef3/foto01principalsite.jpg",
+            "video": [
+                {
+                    "idVideo": 0,
+                    "link": "https://www.youtube.com/embed/jQI0bsCtdws",
+                    "thumbnail": "https://i.ytimg.com/vi/jQI0bsCtdws/mqdefault.jpg",
+                    "titulo": "Cálculo é Fácil! - Cálculo 1 (#1)",
+                    "data": [
+                        {
+                            "idPergunta": 0,
+                            "pergunta": "Quando começa a ensinar derivada?",
+                            "resposta": [
+                                {
+                                    "perg": "Na metade do curso."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 1,
+                            "pergunta": "Qual o simbolo de intervalo fechado?",
+                            "resposta": [
+                                {
+                                    "perg": "É utilizado o parenteses."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "idVideo": 1,
+                    "link": "https://www.youtube.com/embed/jQI0bsCtdws",
+                    "thumbnail": "https://i.ytimg.com/vi/jQI0bsCtdws/mqdefault.jpg",
+                    "titulo": "Cálculo é Fácil! - Cálculo 1 (#1)",
+                    "data": [
+                        {
+                            "idPergunta": 0,
+                            "pergunta": "Quando começa a ensinar derivada?",
+                            "resposta": [
+                                {
+                                    "perg": "Na metade do curso."
+                                }
+                            ]
+                        },
+                        {
+                            "idPergunta": 1,
+                            "pergunta": "Qual o simbolo de intervalo fechado?",
+                            "resposta": [
+                                {
+                                    "perg": "É utilizado o parenteses."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
