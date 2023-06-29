@@ -101,7 +101,7 @@ footer {
     margin-left: 10%;
 }
 
-.botao-avancar {
+#botao-avancar {
     grid-row: 2;
     grid-column: 2;
     justify-self: end;
@@ -109,7 +109,7 @@ footer {
     margin-top: 1%;
 }
 
-.botao-voltar {
+#botao-voltar {
     grid-row: 2;
     grid-column: 1;
     width: fit-content;

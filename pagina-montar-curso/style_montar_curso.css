@@ -13,8 +13,7 @@ header {
 
 main {
     background-color: lightgray;
-    padding-bottom: 80px;
-    padding-top: 40px;
+    padding-bottom: 100px;
 }
 
 footer {
@@ -76,53 +75,6 @@ footer {
 }
 /* fim cabecalho */
 
-
-/* main */
-#banner-curso {
-    width: 95%;
-    height: 200px;
-    margin-left: 2.5%;
-}
-
-#div-banner {
-
-}
-
-#aulas-do-curso {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3%;
-    margin-top: 2%;
-    align-items: stretch;
-}
-
-#div-thumbnail {
-    flex: 1 1 20%;
-    margin-top: 3%;
-}
-
-#thumbnail {
-    height: 180px;
-}
-
-.ancora-aulas {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#div-thumbnail h6 {
-    text-align: center;
-}
-
-.imagem-texto {
-    max-width: min-content;
-}
-
-/* fim main */
 
 
 /* footer */
