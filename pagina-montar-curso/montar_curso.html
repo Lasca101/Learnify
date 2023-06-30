@@ -21,6 +21,7 @@
     <script src="https://kit.fontawesome.com/f2c736aaab.js" crossorigin="anonymous"></script>
     <!-- fim código para incluir o FontAwesome no site -->
 
+    <script src="jquery-3.7.0.min.js"></script>
     <script defer src="script_montar_curso.js"></script>
 </head>
 
@@ -32,6 +33,11 @@
 
 
     <header>
+        <div id="div-tutorial">
+            <i class="fa-solid fa-circle-xmark fa-xl" id="close-tutorial" style="color: #000000;"></i>
+            <img id="imagem-tutorial" src="/images/tutorial-link.png" alt="tutorial-get-link">
+        </div>
+
         <div id="cabecalho">
             <nav class="barra-home">
                 <ul class="menu">
@@ -47,18 +53,16 @@
 
 
     <main>
-        <div>
-            <label for="formFileLg" class="form-label">Selecione uma imagem para o banner (recomendado 1800x180px)</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        <div id="div-inserir-banner">
+            <label id="label-banner" for="formFileLg" class="form-label">Selecione uma imagem para o banner (recomendado 1800x180px)</label>
+            <input class="form-control form-control-lg" id="formFileLg input-banner" type="file">
         </div>
-        <div>
-            <label for="formFileLg" class="form-label">Selecione uma imagem para a thumbnail do video</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        <div class="input-group input-group-sm mb-3" id="div-numero-aulas">
+            <input type="number" id="input-inserir-numero-aulas" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o numero de aulas que deseja inserir em seu curso">
+            <button id="botao-enviar-numero-aulas" type="button" class="btn btn-secondary">Prosseguir</button>
         </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Insira código do link do video</label>
-        </div>
+        <div id="div-inserir-img-link"></div>
+        <div id="div-botao-finalizar"></div>
     </main>
 
 
@@ -90,6 +94,23 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function () {
+            $('#div-tutorial').hide();
+
+            $(document).on('click', '.botao-como-pegar-link', function () {
+                $('#div-tutorial').show();
+            });
+
+            $(document).on('click', '.botao-como-pegar-link', function () {
+                $('#div-tutorial').animate({ width: "100%", height: "100%" });
+            });
+
+            $(document).on('click', '#close-tutorial', function () {
+                $('#div-tutorial').animate({ width: "100%", height: "0" });
+            });
+        });
+    </script>
 </body>
 
 </html>
