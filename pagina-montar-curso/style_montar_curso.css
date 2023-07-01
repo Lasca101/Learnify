@@ -75,11 +75,33 @@ footer {
 }
 /* fim cabecalho */
 
+#div-inserir-dados {
+    padding-top: 2%;
+    margin-left: 5%;
+}
+
+#div-nome-categoria {
+    display: flex;
+}
+
+#inserir-categoria {
+    margin-left: 5%;
+}
+
+#div-inserir-descricao {
+    margin-top: 3%;
+    max-width: 95%;
+}
+
+.inserir-dados {
+    max-width: 45%;
+    margin-top: 1%;
+}
 
 #div-inserir-banner {
 max-width: 90%;
 margin-left: 5%;
-padding-top: 1%;
+padding-top: 3%;
 }
 
 #label-banner {
@@ -91,6 +113,18 @@ padding-top: 1%;
 
 }
 
+#div-inserir-imagem {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+#continuar-cadastro {
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 4%;
+}
 
 #div-numero-aulas {
     margin-top: 5%;

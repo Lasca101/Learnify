@@ -53,10 +53,25 @@
 
 
     <main>
+        <div id="div-inserir-dados">
+            <div id="div-nome-categoria">
+                <input id="inserir-nome" type="text" class="form-control inserir-dados" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o nome do curso">
+                <input id="inserir-categoria" type="text" class="form-control inserir-dados" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira a categoria do curso">
+            </div>
+            <div id="div-inserir-descricao" class="input-group">
+                <span class="input-group-text">Insira a descrição do curso</span>
+                <textarea id="inserir-descricao" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
         <div id="div-inserir-banner">
             <label id="label-banner" for="formFileLg" class="form-label">Selecione uma imagem para o banner (recomendado 1800x180px)</label>
-            <input class="form-control form-control-lg" id="formFileLg input-banner" type="file">
+            <input class="form-control form-control-lg" id="input-banner" type="file">
         </div>
+        <div id="div-inserir-imagem">
+            <label id="label-imagem" for="formFileLg" class="form-label">Selecione uma imagem para a homepage (recomendado 700x450px)</label>
+            <input class="form-control form-control-lg" id="input-imagem" type="file">
+        </div>
+        <button id="continuar-cadastro" type="button" class="btn btn-primary">Continuar</button>
         <div class="input-group input-group-sm mb-3" id="div-numero-aulas">
             <input type="number" id="input-inserir-numero-aulas" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o numero de aulas que deseja inserir em seu curso">
             <button id="botao-enviar-numero-aulas" type="button" class="btn btn-secondary">Prosseguir</button>
@@ -109,6 +124,9 @@
             $(document).on('click', '#close-tutorial', function () {
                 $('#div-tutorial').animate({ width: "100%", height: "0" });
             });
+
+
+            $('#div-numero-aulas').hide();
         });
     </script>
 </body>
