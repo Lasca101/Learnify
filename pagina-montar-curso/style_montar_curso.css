@@ -102,6 +102,7 @@ footer {
 max-width: 90%;
 margin-left: 5%;
 padding-top: 3%;
+text-align: center;
 }
 
 #label-banner {
@@ -130,7 +131,7 @@ padding-top: 3%;
 
 
 #div-inserir-img-link {
-    margin-top: 2%;
+    padding-top: 2%;
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -142,7 +143,7 @@ padding-top: 3%;
 .inserir-aula {
     flex: 1 1 25%;
     max-width: 25%;
-    margin-top: 2%;
+    padding-top: 2%;
 }
 
 .div-inserir-img {
