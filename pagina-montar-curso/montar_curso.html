@@ -72,12 +72,24 @@
             <input class="form-control form-control-lg" id="input-imagem" type="file">
         </div>
         <button id="continuar-cadastro" type="button" class="btn btn-primary">Continuar</button>
-        <div class="input-group input-group-sm mb-3" id="div-numero-aulas">
-            <input type="number" id="input-inserir-numero-aulas" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o numero de aulas que deseja inserir em seu curso">
-            <button id="botao-enviar-numero-aulas" type="button" class="btn btn-secondary">Prosseguir</button>
+        <div id="div-inserir-img-link">
+            <div class="inserir-aula">
+                <h3>Adicionar Video</h3>
+                <input id="inserir-titulo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o titulo do video">
+                <div class="div-inserir-img">
+                    <label for="formFile" class="form-label">Selecione uma imagem para a thumbnail do video</label>
+                    <input id="input-file-thumb" class="form-control form-control-lg" type="file">
+                </div>
+                <div class="form-floating mb-3 small div-inserir-link">
+                    <input id="input-link-video" class="form-control input-link" id="floatingInput" placeholder="">
+                    <label for="floatingInput">Insira código do link do video</label>
+                    <a href="#" class="botao-como-pegar-link">Como pegar o código do link?</a>
+                </div>
+            </div>
         </div>
-        <div id="div-inserir-img-link"></div>
-        <div id="div-botao-finalizar"></div>
+        <div id="div-botao-finalizar">
+            <button id="finalizar-curso" type="button" class="btn btn-primary">Finalizar</button>
+        </div>
     </main>
 
 
@@ -126,7 +138,8 @@
             });
 
 
-            $('#div-numero-aulas').hide();
+            $('#div-inserir-img-link').hide();
+            $('#div-botao-finalizar').hide();
         });
     </script>
 </body>
