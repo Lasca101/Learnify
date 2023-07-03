@@ -125,3 +125,35 @@ body {
     text-decoration: underline;
 }
 
+
+.arrow-button {
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+    transition: transform 0.3s;
+    margin-left: 20px;
+  }
+  
+  .arrow-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .arrow-button i {
+    animation: none;
+  }
+  
+  .arrow-button:hover i {
+    animation: arrow-animation 1s infinite;
+  }
+  
+  @keyframes arrow-animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
