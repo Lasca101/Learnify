@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/pagina-aula/style_pagina_aula.css">
     <link rel="stylesheet" href="/pagina-aula/style_midia_queries_pagina_aula.css">
-    <link rel="stylesheet" href="/pagina-aula/style_comentarios.css">
-    <link rel="stylesheet" href="/pagina-aula/style_midia_queries_pagina_aula.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-blahblahblah" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-blahblahblah" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width" , initial-scale="1">
     <title>Site Compras</title>
 
@@ -25,41 +24,27 @@
     <!-- fim código para incluir o FontAwesome no site -->
 
     <script defer src="script_pagina_aula.js"></script>
-
     <script src="jquery-3.7.0.min.js"></script>
-    <script defer src="/pagina-aula/script.js"></script>
 </head>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+        </script>
 
 
     <header>
-        <section id="secao-responder">
-            <div id="div-responder">
-                <h2>Responder Pergunta</h2>
-                <form id="area-responder">
-                    <div id="resposta-com-botao">
-                        <input type="text" class="form-control" id="input-resposta" required
-                            placeholder="Digite sua resposta">
-                        <button type="button" id="botao-enviar-resposta" class="btn btn-primary">Enviar</button>
-                    </div>
-                    <button type="button" id="botao-voltar-resposta" class="btn btn-primary">Voltar</button>
-                </form>
-            </div>
-        </section>
-
         <div id="cabecalho">
             <nav class="barra-home">
-              <div id="header">
-                <ul class="menu">
-                  <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-                  <li id="accountLi" style="display: none;"><a id="accountLink" href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
-                  <li id="logoutLi" style="display: none;"><button id="logoutButton" onclick="logout()">Logout</button></li>
-                </ul>
-              </div>
+                <div id="header">
+                    <ul class="menu">
+                        <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
+                        <li id="accountLi" style="display: none;"><a id="accountLink"
+                                href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
+                        <li id="logoutLi" style="display: none;"><button id="logoutButton"
+                                onclick="logout()">Logout</button></li>
+                    </ul>
+                </div>
             </nav>
 
             <nav class="div-logo">
@@ -71,13 +56,17 @@
 
     <main>
         <nav id="div-aula"></nav>
-        <section id="secao-perguntas">
-            <h2>Área de Perguntas e Respostas</h2>
 
-            <form id="area-perguntar">
-                <input type="text" class="form-control" id="input-pergunta" required placeholder="Faça sua pergunta">
-                <button type="button" id="botao-enviar-pergunta" class="btn btn-primary">Enviar</button>
-            </form>
+        <section id="secao-perguntas">
+            <div id="h2-area-perg">
+                <h2>Área de Perguntas e Respostas</h2>
+
+                <form id="area-perguntar">
+                    <input type="text" class="form-control" id="input-pergunta" required
+                        placeholder="Faça sua pergunta">
+                    <button type="button" id="botao-enviar-pergunta" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
 
             <div id="tela"></div>
         </section>
@@ -135,39 +124,39 @@
             });
 
             $(document).keypress(function (e) {
-                if(e.which == 13) {
-                $('#secao-responder').animate({ width: "0", height: "0" });
+                if (e.which == 13) {
+                    $('#secao-responder').animate({ width: "0", height: "0" });
                 }
             });
         });
     </script>
 
     <script>
-// Verificar se o usuário está logado
-if (localStorage.getItem("isLoggedIn") === "true") {
-  // Usuário está logado, atualizar cabeçalho para "Minha Conta"
-  var loginLi = document.getElementById("loginLi");
-  loginLi.style.display = "none";
+        // Verificar se o usuário está logado
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            // Usuário está logado, atualizar cabeçalho para "Minha Conta"
+            var loginLi = document.getElementById("loginLi");
+            loginLi.style.display = "none";
 
-  var accountLi = document.getElementById("accountLi");
-  accountLi.style.display = "block";
+            var accountLi = document.getElementById("accountLi");
+            accountLi.style.display = "block";
 
-  var accountLink = document.getElementById("accountLink");
-  accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
-  accountLink.href = "../central-ajuda/Minhaconta.html";
+            var accountLink = document.getElementById("accountLink");
+            accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
+            accountLink.href = "../central-ajuda/Minhaconta.html";
 
-  var logoutLi = document.getElementById("logoutLi");
-  logoutLi.style.display = "block";
-}
+            var logoutLi = document.getElementById("logoutLi");
+            logoutLi.style.display = "block";
+        }
 
-// Função de logout
-function logout() {
-  // Limpar indicador de login no LocalStorage
-  localStorage.removeItem("isLoggedIn");
+        // Função de logout
+        function logout() {
+            // Limpar indicador de login no LocalStorage
+            localStorage.removeItem("isLoggedIn");
 
-  // Redirecionar para a página de login
-  window.location.href = "../login/login.html";
-}
+            // Redirecionar para a página de login
+            window.location.href = "../login/login.html";
+        }
     </script>
 </body>
 

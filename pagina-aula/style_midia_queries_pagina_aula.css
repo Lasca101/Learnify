@@ -1,4 +1,4 @@
-@media screen and (min-width:240px) and (max-width:1000px) {
+@media screen and (min-width:240px) and (max-width:500px) {
     *{
         margin: 0;
         padding: 0;
@@ -79,7 +79,65 @@
     .frame {
         height: 177px;
     }
+
+
+    /* main comentarios */
+    #input-pergunta {
+        max-width: 100%;
+    }
+
+    #h2-area-perg {
+        width: 100%;
+    }
+
+    #secao-perguntas {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #secao-perguntas h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .botao-responder {
+        height: fit-content;
+    }
+
+    .perguntas {
+        width: fit-content;
+    }
+
+    /**/
+    #div-responder {
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        right: 5%;
+    }
+
+    #resposta-com-botao {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #input-resposta {
+        
+    }
     
+    #secao-responder {
+        text-align: start;
+    }
+
+    #botao-voltar-resposta {
+        margin-left: 5%;
+    }
+    /**/
+    /* fim main comentarios */
+    
+
+
     /* footer */
     .redes-sociais-rodape {
         grid-column: 1;
