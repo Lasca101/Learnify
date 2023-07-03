@@ -21,6 +21,7 @@
     <script src="https://kit.fontawesome.com/f2c736aaab.js" crossorigin="anonymous"></script>
     <!-- fim código para incluir o FontAwesome no site -->
 
+    <script src="jquery-3.7.0.min.js"></script>
     <script defer src="script_montar_curso.js"></script>
 </head>
 
@@ -32,6 +33,11 @@
 
 
     <header>
+        <div id="div-tutorial">
+            <i class="fa-solid fa-circle-xmark fa-xl" id="close-tutorial" style="color: #000000;"></i>
+            <img id="imagem-tutorial" src="/images/tutorial-link.png" alt="tutorial-get-link">
+        </div>
+
         <div id="cabecalho">
             <nav class="barra-home">
                 <ul class="menu">
@@ -47,9 +53,42 @@
 
 
     <main>
-        <div>
-            <label for="formFileLg" class="form-label">Selecione uma imagem para o banner (recomendado 1800x180px)</label>
-            <input class="form-control form-control-lg" id="formFileLg" type="file">
+        <div id="div-inserir-dados">
+            <div id="div-nome-categoria">
+                <input id="inserir-nome" type="text" class="form-control inserir-dados" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o nome do curso">
+                <input id="inserir-categoria" type="text" class="form-control inserir-dados" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira a categoria do curso">
+            </div>
+            <div id="div-inserir-descricao" class="input-group">
+                <span class="input-group-text">Insira a descrição do curso</span>
+                <textarea id="inserir-descricao" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+        <div id="div-inserir-banner">
+            <label id="label-banner" for="formFileLg" class="form-label">Selecione uma imagem para o banner (recomendado 1800x180px)</label>
+            <input class="form-control form-control-lg" id="input-banner" type="file">
+        </div>
+        <div id="div-inserir-imagem">
+            <label id="label-imagem" for="formFileLg" class="form-label">Selecione uma imagem para a homepage (recomendado 700x450px)</label>
+            <input class="form-control form-control-lg" id="input-imagem" type="file">
+        </div>
+        <button id="continuar-cadastro" type="button" class="btn btn-primary">Continuar</button>
+        <div id="div-inserir-img-link">
+            <div class="inserir-aula">
+                <h3>Adicionar Video</h3>
+                <input id="inserir-titulo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Insira o titulo do video">
+                <div class="div-inserir-img">
+                    <label for="formFile" class="form-label">Selecione uma imagem para a thumbnail do video</label>
+                    <input id="input-file-thumb" class="form-control form-control-lg" type="file">
+                </div>
+                <div class="form-floating mb-3 small div-inserir-link">
+                    <input id="input-link-video" class="form-control input-link" id="floatingInput" placeholder="">
+                    <label for="floatingInput">Insira código do link do video</label>
+                    <a href="#" class="botao-como-pegar-link">Como pegar o código do link?</a>
+                </div>
+            </div>
+        </div>
+        <div id="div-botao-finalizar">
+            <button id="finalizar-curso" type="button" class="btn btn-primary">Finalizar</button>
         </div>
     </main>
 
@@ -82,6 +121,27 @@
         </div>
     </footer>
 
+    <script>
+        $(document).ready(function () {
+            $('#div-tutorial').hide();
+
+            $(document).on('click', '.botao-como-pegar-link', function () {
+                $('#div-tutorial').show();
+            });
+
+            $(document).on('click', '.botao-como-pegar-link', function () {
+                $('#div-tutorial').animate({ width: "100%", height: "100%" });
+            });
+
+            $(document).on('click', '#close-tutorial', function () {
+                $('#div-tutorial').animate({ width: "100%", height: "0" });
+            });
+
+
+            $('#div-inserir-img-link').hide();
+            $('#div-botao-finalizar').hide();
+        });
+    </script>
 </body>
 
 </html>

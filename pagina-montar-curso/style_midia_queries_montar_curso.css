@@ -1,4 +1,11 @@
-@media screen and (min-width:240px) and (max-width:1000px) {
+@media screen and (min-width:501px) and (max-width:1500px) {
+    .inserir-aula {
+        flex: 1 1 100%;
+        max-width: 40%;
+    }
+}
+
+@media screen and (min-width:240px) and (max-width:500px) {
     *{
         margin: 0;
         padding: 0;
@@ -26,7 +33,10 @@
     
     
     
-    
+    .inserir-aula {
+        flex: 1 100%;
+        max-width: 70%;
+    }
     
     
     
