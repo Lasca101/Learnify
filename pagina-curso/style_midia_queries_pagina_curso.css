@@ -54,6 +54,7 @@
     
     .menu {
         display: flex;
+        align-items: center;
     }
     
     .menu li {
@@ -74,6 +75,36 @@
         grid-column: 1;
         margin-left: 20%;
     }
+
+    #logoutButton {
+        background-color: #ff0000; /* Defina a cor desejada para o botão de logout */
+        color: #fff; /* Defina a cor do texto no botão de logout */
+        font-size: 18px; /* Defina o tamanho da fonte do botão de logout */
+        padding: 10px 20px; /* Ajuste o preenchimento interno do botão de logout */
+        vertical-align: middle;
+        
+      }
+      
+      #accountLink {
+        color: #ff0000; /* Defina a cor desejada para o link "Minha Conta" */
+        margin-top: 400%;
+        font-size: 20px; 
+        text-decoration: none; /* Remova a linha de baixo do link */
+        margin-right: 10px; 
+        vertical-align: middle;
+        padding-top: 10px;
+        margin-bottom: 0px
+      }
+      
+      #loginLi  {
+        margin-right: 10px; /* Ajuste a margem direita para alinhar com os outros elementos */
+        vertical-align: middle;
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        
+      }
+      
     /* fim cabecalho */
     
     

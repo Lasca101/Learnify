@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/pagina-montar-curso/style_montar_curso.css">
     <link rel="stylesheet" href="/pagina-montar-curso/style_midia_queries_montar_curso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-blahblahblah" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width" , initial-scale="1">
     <title>Site Compras</title>
 
@@ -33,17 +35,17 @@
 
 
     <header>
-        <div id="div-tutorial">
-            <i class="fa-solid fa-circle-xmark fa-xl" id="close-tutorial" style="color: #000000;"></i>
-            <img id="imagem-tutorial" src="/images/tutorial-link.png" alt="tutorial-get-link">
-        </div>
-
         <div id="cabecalho">
-            <nav class="barra-home">
-                <ul class="menu">
-                    <li><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-                </ul>
-            </nav>
+        <nav class="barra-home">
+          <div id="header">
+            <ul class="menu">
+              <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
+              <li id="accountLi" style="display: none;"><a id="accountLink" href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
+              <li id="logoutLi" style="display: none;"><button id="logoutButton" onclick="logout()">Logout</button></li>
+            </ul>
+          </div>
+        </nav>
+
 
             <nav class="div-logo">
                 <a href="/homepage/homepage.html"><img class="logo" src="/images/logo.png" alt="logo"></a>
@@ -142,6 +144,35 @@
             $('#div-botao-finalizar').hide();
         });
     </script>
+
+    <script> 
+// Verificar se o usuário está logado
+if (localStorage.getItem("isLoggedIn") === "true") {
+  // Usuário está logado, atualizar cabeçalho para "Minha Conta"
+  var loginLi = document.getElementById("loginLi");
+  loginLi.style.display = "none";
+
+  var accountLi = document.getElementById("accountLi");
+  accountLi.style.display = "block";
+
+  var accountLink = document.getElementById("accountLink");
+  accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
+  accountLink.href = "../central-ajuda/Minhaconta.html";
+
+  var logoutLi = document.getElementById("logoutLi");
+  logoutLi.style.display = "block";
+}
+
+// Função de logout
+function logout() {
+  // Limpar indicador de login no LocalStorage
+  localStorage.removeItem("isLoggedIn");
+
+  // Redirecionar para a página de login
+  window.location.href = "../login/login.html";
+}
+</script>
+
 </body>
 
 </html>

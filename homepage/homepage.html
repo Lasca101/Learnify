@@ -33,7 +33,7 @@
           <div id="header">
             <ul class="menu">
               <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-              <li id="accountLi" style="display: none;"><a id="accountLink" href="conta.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+              <li id="accountLi" style="display: none;"><a id="accountLink" href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
               <li id="logoutLi" style="display: none;"><button id="logoutButton" onclick="logout()">Logout</button></li>
             </ul>
           </div>
@@ -107,7 +107,7 @@ if (localStorage.getItem("isLoggedIn") === "true") {
 
   var accountLink = document.getElementById("accountLink");
   accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
-  accountLink.href = "conta.html";
+  accountLink.href = "../central-ajuda/Minhaconta.html";
 
   var logoutLi = document.getElementById("logoutLi");
   logoutLi.style.display = "block";
