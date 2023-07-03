@@ -94,7 +94,8 @@
     <div class="container">
       <h1>Central de Ajuda</h1>
 
-      <form action="mail.php">
+      <form action="mail.php" method="POST">
+
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
 
@@ -107,7 +108,7 @@
         <label for="message">Mensagem:</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="button" onclick="redirectToChat()">Enviar </button>
+        <button type="button" onclick="sendEmail()">Enviar </button>
       </form>
     </div>
   </main>
