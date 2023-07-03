@@ -61,8 +61,6 @@ function loadVideo() {
                 }
             }
         })
-<<<<<<< Updated upstream
-=======
 }
 
 
@@ -212,5 +210,4 @@ function comentarios() {
                 event.preventDefault()
             }
         })
->>>>>>> Stashed changes
 }
