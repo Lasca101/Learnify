@@ -76,7 +76,7 @@ footer {
 }
 
 #logoutButton {
-    background-color: #ff0000; /* Defina a cor desejada para o botão de logout */
+    background-color: #009f32; /* Defina a cor desejada para o botão de logout */
     color: #fff; /* Defina a cor do texto no botão de logout */
     font-size: 18px; /* Defina o tamanho da fonte do botão de logout */
     padding: 10px 20px; /* Ajuste o preenchimento interno do botão de logout */
@@ -85,7 +85,7 @@ footer {
   }
   
   #accountLink {
-    color: #ff0000; /* Defina a cor desejada para o link "Minha Conta" */
+    color: #009f32; /* Defina a cor desejada para o link "Minha Conta" */
     margin-top: 400%;
     font-size: 20px; 
     text-decoration: none; /* Remova a linha de baixo do link */
