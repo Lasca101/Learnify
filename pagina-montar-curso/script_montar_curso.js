@@ -5,19 +5,6 @@ function loadVideo() {
     fetch('/json-teste/json.json')
         .then(res => res.json())
         .then(dados => {
-
-            let strDados = localStorage.getItem('db');
-            let objDados = {};
-
-            if (strDados) {
-                objDados = JSON.parse(strDados);
-            }
-            else {
-                objDados = dados;
-            }
-
-            localStorage.setItem('db', JSON.stringify(objDados));
-
             // Função para converter a imagem em base64
             function convertToBase64(file, callback) {
                 const reader = new FileReader();
@@ -29,9 +16,6 @@ function loadVideo() {
 
             // Elementos HTML
             let inputFileThumb = document.querySelector('#input-file-thumb');
-            let codigoLink = document.querySelector('#input-link-video').value;
-            let tituloVideo = document.querySelector('#inserir-titulo').value;
-            let idV = objDados.curso[objDados.curso.length - 1].video.length;
             const adicionarButton = document.getElementById('finalizar-curso');
 
             // Variáveis para armazenar os valores em base64
@@ -51,6 +35,21 @@ function loadVideo() {
             });
 
             adicionarButton.addEventListener('click', function () {
+                let strDados = localStorage.getItem('db');
+                let objDados = {};
+
+                if (strDados) {
+                    objDados = JSON.parse(strDados);
+                }
+                else {
+                    objDados = dados;
+                }
+
+                localStorage.setItem('db', JSON.stringify(objDados));
+
+                let codigoLink = document.querySelector('#input-link-video').value;
+                let tituloVideo = document.querySelector('#inserir-titulo').value;
+                let idV = objDados.curso[objDados.curso.length - 1].video.length;
                 // Verifica se as duas imagens foram selecionadas
                 if (imageBase64_1 && codigoLink && tituloVideo) {
                     // Insere os valores em um objeto JSON
@@ -65,8 +64,14 @@ function loadVideo() {
 
                     objDados.curso[objDados.curso.length - 1].video.push(novoVideo);
                     localStorage.setItem('db', JSON.stringify(objDados));
+
+                    document.querySelector('#input-link-video').value = '';
+                    document.querySelector('#inserir-titulo').value = '';
+                    document.querySelector('#input-file-thumb').value = '';
+
+                    alert("Video adicionado com sucesso! Para adicionar um novo video, preencha os campos novamente. Ao adicionar todos que deseja, apenas saia da pagina para finalizar.")
                 } else {
-                    console.log('Por favor, selecione e preencha todos os campos.');
+                    alert("Por favor, selecione e preencha todos os campos.");
                 }
             });
 
@@ -162,11 +167,15 @@ function salvarAulas() {
                     objDados.curso.push(novoCurso);
                     localStorage.setItem('db', JSON.stringify(objDados));
 
-                    document.querySelector('#div-inserir-img-link').style.display = 'flex';
                     document.querySelector('#continuar-cadastro').style.display = 'none';
+                    document.querySelector('#div-inserir-imagem').style.display = 'none';
+                    document.querySelector('#div-inserir-banner').style.display = 'none';
+                    document.querySelector('#div-inserir-dados').style.display = 'none';
+
+                    document.querySelector('#div-inserir-img-link').style.display = 'flex';
                     document.querySelector('#div-botao-finalizar').style.display = 'flex';
                 } else {
-                    console.log('Por favor, selecione e preencha todos os campos.');
+                    alert("Por favor, selecione e preencha todos os campos.");
                 }
             });
 
