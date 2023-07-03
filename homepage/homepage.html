@@ -30,9 +30,13 @@
     <header>
       <div id="cabecalho">
         <nav class="barra-home">
-          <ul class="menu">
-            <li><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-          </ul>
+          <div id="header">
+            <ul class="menu">
+              <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
+              <li id="accountLi" style="display: none;"><a id="accountLink" href="conta.html"><i class="fas fa-user"></i> Minha Conta</a></li>
+              <li id="logoutLi" style="display: none;"><button id="logoutButton" onclick="logout()">Logout</button></li>
+            </ul>
+          </div>
         </nav>
 
         <nav class="div-logo">
@@ -91,7 +95,33 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script> 
+// Verificar se o usuário está logado
+if (localStorage.getItem("isLoggedIn") === "true") {
+  // Usuário está logado, atualizar cabeçalho para "Minha Conta"
+  var loginLi = document.getElementById("loginLi");
+  loginLi.style.display = "none";
 
+  var accountLi = document.getElementById("accountLi");
+  accountLi.style.display = "block";
+
+  var accountLink = document.getElementById("accountLink");
+  accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
+  accountLink.href = "conta.html";
+
+  var logoutLi = document.getElementById("logoutLi");
+  logoutLi.style.display = "block";
+}
+
+// Função de logout
+function logout() {
+  // Limpar indicador de login no LocalStorage
+  localStorage.removeItem("isLoggedIn");
+
+  // Redirecionar para a página de login
+  window.location.href = "../login/login.html";
+}
+</script>
 </body>
 
 

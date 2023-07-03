@@ -74,6 +74,12 @@ footer {
   margin-left: 50%;
 }
 
+#logoutButton {
+  background-color: #ff0000; /* Defina a cor desejada para o botão de logout */
+  color: #fff; /* Defina a cor do texto no botão de logout */
+  font-size: 18px; /* Defina o tamanho da fonte do botão de logout */
+  padding: 10px 20px; /* Ajuste o preenchimento interno do botão de logout */
+}
 /* fim cabecalho */
 
 
