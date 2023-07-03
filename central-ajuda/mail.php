@@ -1,3 +1,22 @@
+<?php
+
+$name = $_POST['nome'];
+$email= $_POST['email'];
+$subject = $_POST['assunto'];
+$message= $_POST['mensagem'];
+
+
+
+$emailheader = "From:".$name. "<".$email. ">\r\n"
+
+$recipient = "luigi.castro@sga.pucminas.br": 
+
+mail($recipient, $subject, $message, $emailheader )
+or die( "Erro!");
+
+echo'
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -92,23 +111,9 @@
 
   <main>
     <div class="container">
-      <h1>Central de Ajuda</h1>
-
-      <form action="">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="subject">Assunto:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="button" onclick="redirectToChat()">Enviar </button>
-      </form>
+      <h1>Sua mensagem foi enviada! Iremos responder assim que possível.</h1>
+      <p class="back">Volte para a <a href="central_ajuda.html"></a>Central de ajuda</p>
+      
     </div>
   </main>
 
@@ -142,3 +147,15 @@
 </body>
 
 </html>
+
+
+
+
+';
+
+
+
+
+
+
+?>
