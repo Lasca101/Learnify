@@ -22,6 +22,10 @@
     <!-- fim código para incluir o FontAwesome no site -->
 
     <script defer src="script_pagina_aula.js"></script>
+<<<<<<< Updated upstream
+=======
+    <script src="jquery-3.7.0.min.js"></script>
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -47,6 +51,23 @@
 
     <main>
         <nav id="div-aula"></nav>
+<<<<<<< Updated upstream
+=======
+
+        <section id="secao-perguntas">
+            <div id="h2-area-perg">
+                <h2>Área de Perguntas e Respostas</h2>
+
+                <form id="area-perguntar">
+                    <input type="text" class="form-control" id="input-pergunta" required
+                        placeholder="Faça sua pergunta">
+                    <button type="button" id="botao-enviar-pergunta" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <div id="tela"></div>
+        </section>
+>>>>>>> Stashed changes
     </main>
 
 
@@ -83,6 +104,33 @@
         </div>
     </footer>
 
+<<<<<<< Updated upstream
+=======
+    <script>
+        //aparecer secao de responder
+        $(document).ready(function () {
+            $('#secao-responder').hide();
+
+            $(document).on('click', '.botao-responder', function () {
+                $('#secao-responder').show();
+            });
+
+            $(document).on('click', '.botao-responder', function () {
+                $('#secao-responder').animate({ width: "100%", height: "100%" });
+            });
+
+            $(document).on('click', '#botao-voltar-resposta, #botao-enviar-resposta', function () {
+                $('#secao-responder').animate({ width: "0", height: "0" });
+            });
+
+            $(document).keypress(function (e) {
+                if (e.which == 13) {
+                    $('#secao-responder').animate({ width: "0", height: "0" });
+                }
+            });
+        });
+    </script>
+>>>>>>> Stashed changes
 </body>
 
 </html>
