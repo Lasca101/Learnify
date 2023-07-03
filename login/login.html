@@ -1,181 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
+<link rel="stylesheet" href="style.css">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="style_login.css">
-  <link rel="stylesheet" href="style_midia_queries_login.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
-  <script src="script_login.js"></script>
-  <script src="json_login.json"></script>
-
-  <!-- código para incluir o FontAwesome no site -->
-  <script src="https://kit.fontawesome.com/f2c736aaab.js" crossorigin="anonymous"></script>
-  <!-- fim código para incluir o FontAwesome no site -->
-
-  <script>
-    function validarLogin() {
-      var username = document.getElementById('login-username').value;
-      var password = document.getElementById('login-password').value;
-
-      var storedData = localStorage.getItem('loginData');
-
-      if (storedData) {
-        var loginData = JSON.parse(storedData);
-
-        var usuario = loginData.usuarios.find(function (user) {
-          return user.username === username;
-        });
-
-        if (usuario && usuario.password === password) {
-          localStorage.setItem('loggedUser', JSON.stringify(usuario));
-          window.location.replace("usuarios.html");
-        } else {
-          console.log('Credenciais de login inválidas');
-        }
-      } else {
-        console.log('Não há dados de login');
-      }
-    }
-
-    function registrarUsuario() {
-      var username = document.getElementById('register-username').value;
-      var email = document.getElementById('register-email').value;
-      var identity = document.getElementById('register-identity').value;
-      var password = document.getElementById('register-password').value;
-      var dateOfBirth = document.getElementById('register-date-of-birth').value;
-
-      var storedData = localStorage.getItem('loginData');
-      var loginData = storedData ? JSON.parse(storedData) : { usuarios: [] };
-
-      var usuarioExistente = loginData.usuarios.find(function (user) {
-        return user.username === username;
-      });
-
-      if (usuarioExistente) {
-        console.log('Usuário já registrado');
-        return;
-      }
-
-      var novoUsuario = {
-        username: username,
-        email: email,
-        identity: identity,
-        password: password,
-        dateOfBirth: dateOfBirth
-      };
-      loginData.usuarios.push(novoUsuario);
-
-      localStorage.setItem('loginData', JSON.stringify(loginData));
-      console.log('Usuário registrado com sucesso');
-
-      window.location.href = "usuarios.html";
-
-    }
-    function recarregarPagina() {
-      location.reload();
-    }
-  </script>
 </head>
-
 <body>
-  <header>
-    <div id="cabecalho">
-      <nav class="barra-home">
-        <ul class="menu">
-          <li><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-        </ul>
-      </nav>
-
-      <nav class="div-logo">
-        <a href="/homepage/homepage.html"><img class="logo" src="/images/logo.png" alt="logo"></a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <a href="landing_page.html" class="back-link"><i class="fa fa-arrow-left"></i></a>
     <div class="container">
-      <div class="form-wrapper" id="login-form-wrapper">
-        <form id="login-form" onsubmit="validarLogin(); return false;">
-          <h2>Login</h2>
-          <input type="text" id="login-username" placeholder="Usuário" required>
-          <input type="password" id="login-password" placeholder="Senha" required>
-          <button type="submit" class="animate__heartBeat">Entrar</button>
-          <p>Não tem uma conta? <a href="#" onclick="showRegisterOption()">Registre-se</a></p>
-        </form>
-      </div>
-      <div id="register-option" class="option" style="display: none;">
-        <h2>Primeiro precisamos conhecer você...</h2>
-        <button class="register-option" onclick="redirectToForm('register-form1')">Quero Ensinar</button>
-        <button class="register-option" onclick="redirectToForm('register-form2')">Quero Aprender</button>
-      </div>
-      <div class="form-wrapper" id="register-form-wrapper1" style="display: none;">
-        <form id="register-form1" onsubmit="registrarUsuario(); return false;">
-          <h2>Cadastro</h2>
-          <input type="text" id="register-username" placeholder="Usuário" required>
-          <input type="text" id="register-email" placeholder="Email" required>
-          <input type="text" id="register-identity" placeholder="CPF/CNPJ" required>
-          <input type="password" id="register-password" placeholder="Senha" required>
-          <input type="date" id="register-date-of-birth" required>
-          <label for="register-date-of-birth">Data de Nascimento</label>
-          <button type="submit" class="animate__heartBeat">Prosseguir para a Criação do Curso ➔</button>
-          <p>Já tem uma conta? <a href="#" id="login-link">Faça login</a></p>
-        </form>
-      </div>
-      <div class="form-wrapper" id="register-form-wrapper2" style="display: none;">
-        <form id="register-form2" onsubmit="registrarUsuario(); return false;">
-          <h2>Cadastro</h2>
-          <input type="text" id="register-form2-username" placeholder="Usuário" required>
-          <input type="text" id="register-form2-email" placeholder="Email" required>
-          <input type="password" id="register-form2-password" placeholder="Senha" required>
-          <input type="date" id="register-form2-date-of-birth" required>
-          <label for="register-date-of-birth">Data de Nascimento</label>
-          <button type="submit" class="animate__heartBeat">Cadastrar</button>
-          <p>Já tem uma conta? <a href="#" id="login-link2">Faça login</a></p>
-        </form>
-      </div>
-    </div>
-  </main>
-
-  <footer id="footer">
-    <nav class="redes-sociais-rodape itens-rodape">
-        <h4>Redes Sociais</h4>
-        <nav>
-            <a class="texto-itens-rodape" href="#">
-                <i class="fa-brands fa-square-facebook fa-2xl"></i>
-                <i class="fa-brands fa-square-twitter fa-2xl"></i>
-                <i class="fa-brands fa-square-instagram fa-2xl"></i>
-            </a>
-        </nav>
-    </nav>
-
-    <nav class="links-rodape itens-rodape">
-        <h4 class="titulo-links">Institucional</h4>
-        <nav class="conteudo-itens-rodape">
-            <div class="texto-itens-rodape links-politicas">
-                <a class="ancoras" href="/central-ajuda/central_ajuda.html"><p>Central de <br> Ajuda</p></a>
-                <a class="ancoras" href="#"><p>Termos</p></a>
-                <a class="ancoras" href="#"></a><p>Política de <br> Privacidade</p></a>
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>Login</header>
+            <form>
+                <input type="text" id="loginEmail" placeholder="Enter your email">
+                <input type="password" id="loginPassword" placeholder="Enter your password">
+                <a href="#">Forgot password?</a>
+                <input type="button" class="button" value="Login" onclick="login()">
+            </form>
+            <div class="signup">
+                <span class="signup">Don't have an account?
+                 <label for="check">Signup</label>
+                </span>
             </div>
-        </nav>
-    </nav>
-
-    <div class="copyright-rodape">
-        <p>© 2007-2023 learnify.com</p>
+        </div>
+        <div class="registration form">
+            <header>Signup</header>
+            <form>
+                <input type="text" id="signupEmail" placeholder="Enter your email">
+                <input type="password" id="signupPassword" placeholder="Create a password">
+                <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                <input type="button" class="button" value="Signup" onclick="signup()">
+            </form>
+            <div class="signup">
+                <span class="signup">Already have an account?
+                 <label for="check">Login</label>
+                </span>
+            </div>
+        </div>
     </div>
-</footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script_login.js"></script>
-  <script src="json_login.js"></script>
+  
+    <script>
+        const loginForm = document.querySelector('.login.form');
+        const registrationForm = document.querySelector('.registration.form');
+        const loginEmailInput = document.getElementById('loginEmail');
+        const loginPasswordInput = document.getElementById('loginPassword');
+        const signupEmailInput = document.getElementById('signupEmail');
+        const signupPasswordInput = document.getElementById('signupPassword');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+    
+        // Verifica se já existe um usuário logado no LocalStorage
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+        if (isLoggedIn) {
+            redirectToHome();
+        }
+    
+        // Função para fazer login
+        function login() {
+            const email = loginEmailInput.value;
+            const password = loginPasswordInput.value;
+    
+            // Verifica se os campos estão preenchidos
+            if (email && password) {
+                // Simula um processo de autenticação
+                // Você precisa implementar a lógica de autenticação real aqui
+                // Por exemplo, fazer uma chamada AJAX para um servidor
+                // Verificar se o usuário e a senha estão corretos
+    
+                // Após a autenticação bem-sucedida, salva o estado de login no LocalStorage
+                localStorage.setItem('isLoggedIn', true);
+    
+                redirectToHome();
+            } else {
+                alert('Please enter your email and password.');
+            }
+        }
+    
+        // Função para realizar o cadastro
+        function signup() {
+            const email = signupEmailInput.value;
+            const password = signupPasswordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+    
+            // Verifica se os campos estão preenchidos
+            if (email && password && confirmPassword) {
+                // Verifica se as senhas correspondem
+                if (password === confirmPassword) {
+                    // Simula o armazenamento do novo usuário
+                    // Você precisa implementar a lógica real para salvar o usuário
+                    // Por exemplo, fazer uma chamada AJAX para um servidor
+    
+                    // Após o cadastro bem-sucedido, salva o estado de login no LocalStorage
+                    localStorage.setItem('isLoggedIn', true);
+    
+                    redirectToHome();
+                } else {
+                    alert('Passwords do not match.');
+                }
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    
+        // Função para redirecionar para a página de home.html
+        function redirectToHome() {
+            window.location.href = 'home.html';
+        }
+    
+        
+    </script>
 </body>
-
 </html>
