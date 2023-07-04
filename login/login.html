@@ -17,27 +17,27 @@
         <div class="login form">
             <header>Login</header>
             <form>
-                <input type="text" id="loginEmail" placeholder="Enter your email">
-                <input type="password" id="loginPassword" placeholder="Enter your password">
-                <a href="#">Forgot password?</a>
+                <input type="text" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginPassword" placeholder="Senha">
+                <a href="#">Esqueceu a senha?</a>
                 <input type="button" class="button" value="Login" onclick="login()">
             </form>
             <div class="signup">
-                <span class="signup">Don't have an account?
-                    <label for="check">Signup</label>
+                <span class="signup">Não tem uma conta?
+                    <label for="check">Registre-se</label>
                 </span>
             </div>
         </div>
         <div class="registration form">
-            <header>Signup</header>
+            <header>Registro</header>
             <form>
-                <input type="text" id="signupEmail" placeholder="Enter your email">
-                <input type="password" id="signupPassword" placeholder="Create a password">
-                <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                <input type="text" id="signupEmail" placeholder="Email">
+                <input type="password" id="signupPassword" placeholder="Senha">
+                <input type="password" id="confirmPassword" placeholder="Confirme sua Senha">
                 <input type="button" class="button" value="Signup" onclick="signup()">
             </form>
             <div class="signup">
-                <span class="signup">Already have an account?
+                <span class="signup">Já tem uma conta?
                     <label for="check">Login</label>
                 </span>
             </div>
@@ -54,10 +54,10 @@
       
           if (email === savedEmail && password === savedPassword) {
             localStorage.setItem("isLoggedIn", "true");
-            alert("Login successful!");
+            alert("Sucesso!");
             window.location.href = "../homepage/homepage.html";
           } else {
-            alert("Invalid email or password!");
+            alert("Senha/Email Inválidos!");
           }
         }
       
@@ -67,7 +67,7 @@
           var confirmPassword = document.getElementById("confirmPassword").value;
       
           if (password !== confirmPassword) {
-            alert("Passwords do not match!");
+            alert("Senhas não batem!");
             return;
           }
       
@@ -75,7 +75,7 @@
           localStorage.setItem("password", password);
           localStorage.setItem("isLoggedIn", "true");
       
-          alert("Signup successful!");
+          alert("Sucesso!");
           window.location.href = "../homepage/homepage.html";
         }
       </script>
