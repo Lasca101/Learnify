@@ -45,63 +45,40 @@
     </div>
 
     <script>
-        const loginForm = document.querySelector('.login.form');
-        const registrationForm = document.querySelector('.registration.form');
-        const loginEmailInput = document.getElementById('loginEmail');
-        const loginPasswordInput = document.getElementById('loginPassword');
-        const signupEmailInput = document.getElementById('signupEmail');
-        const signupPasswordInput = document.getElementById('signupPassword');
-        const confirmPasswordInput = document.getElementById('confirmPassword');
-
-        // Função para fazer login
         function login() {
-            const email = loginEmailInput.value;
-            const password = loginPasswordInput.value;
-
-            // Verifica se os campos estão preenchidos
-            if (email && password) {
-                // Verifique se o usuário e a senha estão corretos
-                if (email === 'exemple@example.com' && password === 'password123') {
-                    // Salva o estado de login no LocalStorage
-                    localStorage.setItem('isLoggedIn', true);
-                    // Redireciona para a página de home.html
-                    window.location.href = '../homepage/homepage.html';
-                } else {
-                    alert('Invalid email or password.');
-                }
-            } else {
-                alert('Please enter your email and password.');
-            }
+          var email = document.getElementById("loginEmail").value;
+          var password = document.getElementById("loginPassword").value;
+      
+          var savedEmail = localStorage.getItem("email");
+          var savedPassword = localStorage.getItem("password");
+      
+          if (email === savedEmail && password === savedPassword) {
+            localStorage.setItem("isLoggedIn", "true");
+            alert("Login successful!");
+            window.location.href = "../homepage/homepage.html";
+          } else {
+            alert("Invalid email or password!");
+          }
         }
-
-        // Função para realizar o cadastro
+      
         function signup() {
-            const email = signupEmailInput.value;
-            const password = signupPasswordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
-
-            // Verifica se os campos estão preenchidos
-            if (email && password && confirmPassword) {
-                // Verifica se as senhas correspondem
-                if (password === confirmPassword) {
-                    // Após o cadastro bem-sucedido, salva o estado de login no LocalStorage
-                    localStorage.setItem('isLoggedIn', true);
-
-                    redirectToHome();
-                } else {
-                    alert('Passwords do not match.');
-                }
-            } else {
-                alert('Please fill in all fields.');
-            }
+          var email = document.getElementById("signupEmail").value;
+          var password = document.getElementById("signupPassword").value;
+          var confirmPassword = document.getElementById("confirmPassword").value;
+      
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+          }
+      
+          localStorage.setItem("email", email);
+          localStorage.setItem("password", password);
+          localStorage.setItem("isLoggedIn", "true");
+      
+          alert("Signup successful!");
+          window.location.href = "../homepage/homepage.html";
         }
-
-        // Função para redirecionar para a página de home.html
-        function redirectToHome() {
-            window.location.href = '../homepage/homepage.html';
-        }
-    </script>
-
+      </script>
 </body>
 
 </html>
