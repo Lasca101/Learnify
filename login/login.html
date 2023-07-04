@@ -2,13 +2,15 @@
 <html>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 <head>
 </head>
+
 <body>
     <header>
         <a href="../homepage/homepage.html" class="arrow-button">
             <i class="fas fa-arrow-left"></i>
-          </a>
+        </a>
     </header>
     <div class="container">
         <input type="checkbox" id="check">
@@ -22,7 +24,7 @@
             </form>
             <div class="signup">
                 <span class="signup">Don't have an account?
-                 <label for="check">Signup</label>
+                    <label for="check">Signup</label>
                 </span>
             </div>
         </div>
@@ -36,12 +38,12 @@
             </form>
             <div class="signup">
                 <span class="signup">Already have an account?
-                 <label for="check">Login</label>
+                    <label for="check">Login</label>
                 </span>
             </div>
         </div>
     </div>
-  
+
     <script>
         const loginForm = document.querySelector('.login.form');
         const registrationForm = document.querySelector('.registration.form');
@@ -50,52 +52,41 @@
         const signupEmailInput = document.getElementById('signupEmail');
         const signupPasswordInput = document.getElementById('signupPassword');
         const confirmPasswordInput = document.getElementById('confirmPassword');
-    
-        // Verifica se já existe um usuário logado no LocalStorage
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-    
-        if (isLoggedIn) {
-            redirectToHome();
-        }
-    
+
         // Função para fazer login
         function login() {
             const email = loginEmailInput.value;
             const password = loginPasswordInput.value;
-    
+
             // Verifica se os campos estão preenchidos
             if (email && password) {
-                // Simula um processo de autenticação
-                // Você precisa implementar a lógica de autenticação real aqui
-                // Por exemplo, fazer uma chamada AJAX para um servidor
-                // Verificar se o usuário e a senha estão corretos
-    
-                // Após a autenticação bem-sucedida, salva o estado de login no LocalStorage
-                localStorage.setItem('isLoggedIn', true);
-    
-                redirectToHome();
+                // Verifique se o usuário e a senha estão corretos
+                if (email === 'exemple@example.com' && password === 'password123') {
+                    // Salva o estado de login no LocalStorage
+                    localStorage.setItem('isLoggedIn', true);
+                    // Redireciona para a página de home.html
+                    window.location.href = '../homepage/homepage.html';
+                } else {
+                    alert('Invalid email or password.');
+                }
             } else {
                 alert('Please enter your email and password.');
             }
         }
-    
+
         // Função para realizar o cadastro
         function signup() {
             const email = signupEmailInput.value;
             const password = signupPasswordInput.value;
             const confirmPassword = confirmPasswordInput.value;
-    
+
             // Verifica se os campos estão preenchidos
             if (email && password && confirmPassword) {
                 // Verifica se as senhas correspondem
                 if (password === confirmPassword) {
-                    // Simula o armazenamento do novo usuário
-                    // Você precisa implementar a lógica real para salvar o usuário
-                    // Por exemplo, fazer uma chamada AJAX para um servidor
-    
                     // Após o cadastro bem-sucedido, salva o estado de login no LocalStorage
                     localStorage.setItem('isLoggedIn', true);
-    
+
                     redirectToHome();
                 } else {
                     alert('Passwords do not match.');
@@ -104,13 +95,13 @@
                 alert('Please fill in all fields.');
             }
         }
-    
+
         // Função para redirecionar para a página de home.html
         function redirectToHome() {
-            window.location.href = "../homepage/homepage.html";
+            window.location.href = '../homepage/homepage.html';
         }
-    
-        
     </script>
+
 </body>
+
 </html>

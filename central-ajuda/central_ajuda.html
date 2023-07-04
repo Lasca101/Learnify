@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style_central_ajuda.css">
   <link rel="stylesheet" href="style_midia_queries_central_ajuda.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-blahblahblah" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-blahblahblah" crossorigin="anonymous" />
   <meta name="viewport" content="width=device-width" , initial-scale="1">
   <title>Site Compras</title>
 
@@ -29,7 +30,7 @@
         <div id="header">
           <ul class="menu">
             <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-            <li id="accountLi" style="display: none;"><a id="accountLink" href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
+            <li id="accountLi" style="display: none;"><a id="accountLink" href='/pagina-montar-curso/montar_curso.html'><i class="fas fa-user"></i> Monte seu Curso</a></li>
             <li id="logoutLi" style="display: none;"><button id="logoutButton" onclick="logout()">Logout</button></li>
           </ul>
         </div>
@@ -79,9 +80,14 @@
       <h4 class="titulo-links">Institucional</h4>
       <nav class="conteudo-itens-rodape">
         <div class="texto-itens-rodape links-politicas">
-          <a class="ancoras" href="/central-ajuda/central_ajuda.html"><p>Central de <br> Ajuda</p></a>
-          <a class="ancoras" href="#"><p>Termos</p></a>
-          <a class="ancoras" href="#"></a><p>Política de <br> Privacidade</p></a>
+          <a class="ancoras" href="/central-ajuda/central_ajuda.html">
+            <p>Central de <br> Ajuda</p>
+          </a>
+          <a class="ancoras" href="#">
+            <p>Termos</p>
+          </a>
+          <a class="ancoras" href="#"></a>
+          <p>Política de <br> Privacidade</p></a>
         </div>
       </nav>
     </nav>
@@ -93,30 +99,30 @@
 
   <script>
     // Verificar se o usuário está logado
-if (localStorage.getItem("isLoggedIn") === "true") {
-  // Usuário está logado, atualizar cabeçalho para "Minha Conta"
-  var loginLi = document.getElementById("loginLi");
-  loginLi.style.display = "none";
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      // Usuário está logado, atualizar cabeçalho para "Monte seu Curso"
+      var loginLi = document.getElementById("loginLi");
+      loginLi.style.display = "none";
 
-  var accountLi = document.getElementById("accountLi");
-  accountLi.style.display = "block";
+      var accountLi = document.getElementById("accountLi");
+      accountLi.style.display = "block";
 
-  var accountLink = document.getElementById("accountLink");
-  accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
-  accountLink.href = "../central-ajuda/Minhaconta.html";
+      var accountLink = document.getElementById("accountLink");
+      accountLink.innerHTML = '<i class="fas fa-user"></i> Monte seu Curso';
+      accountLink.href = "/pagina-montar-curso/montar_curso.html";
 
-  var logoutLi = document.getElementById("logoutLi");
-  logoutLi.style.display = "block";
-}
+      var logoutLi = document.getElementById("logoutLi");
+      logoutLi.style.display = "block";
+    }
 
-// Função de logout
-function logout() {
-  // Limpar indicador de login no LocalStorage
-  localStorage.removeItem("isLoggedIn");
+    // Função de logout
+    function logout() {
+      // Limpar indicador de login no LocalStorage
+      localStorage.removeItem("isLoggedIn");
 
-  // Redirecionar para a página de login
-  window.location.href = "../login/login.html";
-}
+      // Redirecionar para a página de login
+      window.location.href = "../login/login.html";
+    }
   </script>
 </body>
 

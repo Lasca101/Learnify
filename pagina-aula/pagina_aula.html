@@ -47,14 +47,13 @@
                 </form>
             </div>
         </section>
-        
+
         <div id="cabecalho">
             <nav class="barra-home">
                 <div id="header">
                     <ul class="menu">
                         <li id="loginLi"><a href="/login/login.html" class="itens-barra-home">Login/Cadastro</a></li>
-                        <li id="accountLi" style="display: none;"><a id="accountLink"
-                                href='../central-ajuda/Minhaconta.html'><i class="fas fa-user"></i> Minha Conta</a></li>
+                        <li id="accountLi" style="display: none;"><a id="accountLink" href='/pagina-montar-curso/montar_curso.html'><i class="fas fa-user"></i> Monte seu Curso</a></li>
                         <li id="logoutLi" style="display: none;"><button id="logoutButton"
                                 onclick="logout()">Logout</button></li>
                     </ul>
@@ -148,7 +147,7 @@
     <script>
         // Verificar se o usuário está logado
         if (localStorage.getItem("isLoggedIn") === "true") {
-            // Usuário está logado, atualizar cabeçalho para "Minha Conta"
+            // Usuário está logado, atualizar cabeçalho para "Monte seu Curso"
             var loginLi = document.getElementById("loginLi");
             loginLi.style.display = "none";
 
@@ -156,8 +155,8 @@
             accountLi.style.display = "block";
 
             var accountLink = document.getElementById("accountLink");
-            accountLink.innerHTML = '<i class="fas fa-user"></i> Minha Conta';
-            accountLink.href = "../central-ajuda/Minhaconta.html";
+            accountLink.innerHTML = '<i class="fas fa-user"></i> Monte seu Curso';
+            accountLink.href = "/pagina-montar-curso/montar_curso.html";
 
             var logoutLi = document.getElementById("logoutLi");
             logoutLi.style.display = "block";

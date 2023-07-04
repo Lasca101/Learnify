@@ -99,40 +99,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "idVideo": 4,
-                    "link": "cKagvm-BiwI",
-                    "thumbnail": "https://i.ytimg.com/vi/cKagvm-BiwI/maxresdefault.jpg",
-                    "titulo": "Linguagem C - Aula 2.2 - Inserindo dados pelo teclado em C - scanf - entrada de dados (2022)",
-                    "data": [
-                        {
-                            "idPergunta": 0,
-                            "pergunta": "",
-                            "resposta": [
-                                {
-                                    "perg": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "idVideo": 5,
-                    "link": "tfLC_huv-Ko",
-                    "thumbnail": "https://i.ytimg.com/vi/tfLC_huv-Ko/maxresdefault.jpg",
-                    "titulo": "Linguagem C - Aula 3.1 - Entenda variáveis e atrubuição de dados - operador = em C (2022)",
-                    "data": [
-                        {
-                            "idPergunta": 0,
-                            "pergunta": "",
-                            "resposta": [
-                                {
-                                    "perg": ""
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         },

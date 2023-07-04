@@ -9,6 +9,7 @@
   <title>Trabalho Interdisciplinar - Documentação</title>
   <meta name="description" content="Your ThemeForest item Name and description">
   <meta name="author" content="harnishdesign.net">
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
 
   <!-- Stylesheet
 ============================== -->
@@ -78,7 +79,10 @@
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#ti_func1">Funcionalidade 1</a></li>
               <li class="nav-item"><a class="nav-link" href="#ti_func2">Funcionalidade 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ti_func3">Funcionalidade 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func3">Funcionalidade 3</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func4">Funcionalidade 4</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func5">Funcionalidade 5</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func6">Funcionalidade 6</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#ti_estruturas_dados">Estruturas de Dados</a>
@@ -141,54 +145,152 @@
           </section>
 
           <section id="ti_func1">
-            <h3>Funcionalidade 1 - Cadastro de Contatos</h2>
-              <p class="text-4">Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
+            <h3>Funcionalidade 1 - Home Page</h2>
+              <p class="text-4">Exibe os cursos cadastrados na plataforma, incluindo sua imagem principal, nome e categoria, além do link para a página do curso.</p>
               <ul class="list-unstyled">
-                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
                 <li><strong>Instruções de acesso: </strong><ul>
-                  <li>Abra o site e efetue o login</li>
-                  <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                  <li>Em seguida, escolha a opção Contatos</li>
+                  <li>Abra o site na homepage.html</li>
                 </ul></li>
               </ul>
-              <p class="text-center"><img class="img-fluid" src="assets/images/cadastro-contatos.png" alt="Tela Cadastro de Contatos"></p>
+              <p class="text-center"><img class="img-fluid" src="assets/images/homepage.png" alt="Tela Página Principal"></p>
+          <hr class="divider">
+
+          <section id="ti_func2">
+            <h3>Funcionalidade 2 - Página do Curso</h2>
+              <p class="text-4">Exibe as aulas cadastradas naquele curso com o link para a pagina do video.</p>
+              <ul class="list-unstyled">
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
+                <li><strong>Instruções de acesso: </strong><ul>
+                  <li>Abra o site na homepage.html</li>
+                  <li>Clique no curso que desejar para ser redirecionado para sua página</li>
+                </ul></li>
+              </ul>
+              <p class="text-center"><img class="img-fluid" src="assets/images/pagina-curso.png" alt="Tela Página do Curso"></p>
+          <hr class="divider">
+
+          <section id="ti_func3">
+            <h3>Funcionalidade 3 - Página da Video Aula</h2>
+              <p class="text-4">Exibe a aula do curso, com a opção de avançar ou voltar uma aula e a seção de comentários logo em baixo.</p>
+              <ul class="list-unstyled">
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
+                <li><strong>Instruções de acesso: </strong><ul>
+                  <li>Abra o site na homepage.html</li>
+                  <li>Clique no curso que desejar para ser redirecionado para sua página</li>
+                  <li>Clique na aula que desejar para ser redirecionado para sua página</li>
+                  <li>Caso deseje avançar uma aula ou voltar, clique no botão verde "próxima aula" ou no cinza "aula anterior"</li>
+                </ul></li>
+              </ul>
+              <p class="text-center"><img class="img-fluid" src="assets/images/pagina-aula.png" alt="Tela Página Video Aula"></p>
+          <hr class="divider">
+
+          <section id="ti_func4">
+            <h3>Funcionalidade 4 - Seção de Perguntas e Respostas</h2>
+              <p class="text-4">Exibe perguntas feitas sobre aquela video aula, e permite enviar uma pergunta nova ou responder uma já existente.</p>
+              <ul class="list-unstyled">
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
+                <li><strong>Instruções de acesso: </strong><ul>
+                  <li>Abra o site na homepage.html</li>
+                  <li>Clique no curso que desejar para ser redirecionado para sua página</li>
+                  <li>Clique na aula que desejar para ser redirecionado para sua página</li>
+                  <li>Role a página para baixo onde se encontra a seção</li>
+                  <li>Caso deseje enviar uma nova pergunta, digite no campo "faça sua pergunta" e clique no botão enviar</li>
+                  <li>Caso deseje visualizar as respostas de uma pergunta específica, clique no botão de respostas da pergunta desejada</li>
+                  <li>Caso deseje enviar uma nova resposta para alguma pergunta, clique no botão de responder dela. Ele irá exibir um novo campo para digitar e enviar sua resposta</li>
+                </ul></li>
+              </ul>
+              <p class="text-center"><img class="img-fluid" src="assets/images/secao-comentarios.png" alt="Seção de Perguntas e Respostas"></p>
+          <hr class="divider">
+
+          <section id="ti_func5">
+            <h3>Funcionalidade 5 - Seção de Perguntas e Respostas</h2>
+              <p class="text-4">Exibe perguntas feitas sobre aquela video aula, e permite enviar uma pergunta nova ou responder uma já existente.</p>
+              <ul class="list-unstyled">
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
+                <li><strong>Instruções de acesso: </strong><ul>
+                  <li>Abra o site na homepage.html</li>
+                  <li>Clique no curso que desejar para ser redirecionado para sua página</li>
+                  <li>Clique na aula que desejar para ser redirecionado para sua página</li>
+                  <li>Role a página para baixo onde se encontra a seção</li>
+                  <li>Caso deseje enviar uma nova pergunta, digite no campo "faça sua pergunta" e clique no botão enviar</li>
+                  <li>Caso deseje visualizar as respostas de uma pergunta específica, clique no botão de respostas da pergunta desejada</li>
+                  <li>Caso deseje enviar uma nova resposta para alguma pergunta, clique no botão de responder dela. Ele irá exibir um novo campo para digitar e enviar sua resposta</li>
+                </ul></li>
+              </ul>
+              <p class="text-center"><img class="img-fluid" src="assets/images/secao-comentarios.png" alt="Seção de Perguntas e Respostas"></p>
+          <hr class="divider">
+
+          <section id="ti_func6">
+            <h3>Funcionalidade 6 - Seção de Perguntas e Respostas</h2>
+              <p class="text-4">Exibe perguntas feitas sobre aquela video aula, e permite enviar uma pergunta nova ou responder uma já existente.</p>
+              <ul class="list-unstyled">
+                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_cursos">Cursos</a></li>
+                <li><strong>Instruções de acesso: </strong><ul>
+                  <li>Abra o site na homepage.html</li>
+                  <li>Clique no curso que desejar para ser redirecionado para sua página</li>
+                  <li>Clique na aula que desejar para ser redirecionado para sua página</li>
+                  <li>Role a página para baixo onde se encontra a seção</li>
+                  <li>Caso deseje enviar uma nova pergunta, digite no campo "faça sua pergunta" e clique no botão enviar</li>
+                  <li>Caso deseje visualizar as respostas de uma pergunta específica, clique no botão de respostas da pergunta desejada</li>
+                  <li>Caso deseje enviar uma nova resposta para alguma pergunta, clique no botão de responder dela. Ele irá exibir um novo campo para digitar e enviar sua resposta</li>
+                </ul></li>
+              </ul>
+              <p class="text-center"><img class="img-fluid" src="assets/images/secao-comentarios.png" alt="Seção de Perguntas e Respostas"></p>
           <hr class="divider">
 
     <section id="ti_estruturas_dados">
       <h2>Estruturas de Dados</h2>
-      <p class="lead">Esta seção traz o detlahamento das estruturas de dados utilizadas na solução. É apresentado um exemplo de registro no formato JSON.</p>
+      <p class="lead">Esta seção traz o detalhamento das estruturas de dados utilizadas na solução. É apresentado um exemplo de registro no formato JSON.</p>
       </section>
           <!-- Code
 		============================ -->
-          <section id="ti_ed_contatos">
-            <h2>Estruturas de Dados - Contatos</h2>
-            <p class="text-4">Contatos da aplicação</p>
+          <section id="ti_ed_cursos">
+            <h2>Estruturas de Dados - Cursos</h2>
+            <p class="text-4">Contem todos os dados de cada curso</p>
 
             <pre>
               {
-                "id": 1,
-                "nome": "Leanne Graham",
-                "cidade": "Belo Horizonte",
-                "categoria": "amigos",
-                "email": "Sincere@april.biz",
-                "telefone": "1-770-736-8031",
-                "website": "hildegard.org"
-              }
+                "curso": [
+                    {
+                        "idCurso": 0,
+                        "nome": "Programação em C - Prof. Pietro Martins",
+                        "descricao": "Um curso com tudo que você precisa aprender para ser um programador em C",
+                        "categoria": "programação",
+                        "banner": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                        "imagem": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                        "video": [
+                            {
+                                "idVideo": 0,
+                                "link": "2w8GYzBjNj8",
+                                "thumbnail": "https://i.ytimg.com/vi/2w8GYzBjNj8/maxresdefault.jpg",
+                                "titulo": "Primeira Aula Linguagem C",
+                                "data": [
+                                    {
+                                        "idPergunta": 0,
+                                        "pergunta": "Como você faz a função retornar inteiro?",
+                                        "resposta": [
+                                            {
+                                                "perg": "Você deve utilizar int para isso."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+             }
             </pre>
           </section>    
 
           <section id="ti_ed_usuarios">
             <h2>Estruturas de Dados - Usuários</h2>
-            <p class="text-4">Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+            <p class="text-4">Registro dos usuários do sistema utilizados para login</p>
 
             <pre>
               {
-                id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                email: "admin@abc.com"
-                id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                login: "admin"
-                nome: "Administrador do Sistema"
-                senha: "123"
+                "email": "example@example.com",
+                "password": "password123"
               }
             </pre>
           </section>
